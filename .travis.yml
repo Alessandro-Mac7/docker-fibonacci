@@ -1,9 +1,11 @@
 sudo: required 
+language: generic
+
 services:
   - docker
 
 before_install:
-  - docker build -t alessandromacri/client-test -f ./client/Dockerfile.dev .
+  - docker build -t alessandromacri/client-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true alessandromacri/client-test npm test
