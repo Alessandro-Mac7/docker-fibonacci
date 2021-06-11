@@ -1,0 +1,29 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions":[
+        {
+            "name":"client",
+            "image": "alessandromacri/multi-client",
+            "hostname": "client",
+            "essential": false
+        },
+        {
+            "name":"api",
+            "image": "alessandromacri/multi-api",
+            "hostname": "api",
+            "essential": false
+        },
+        {
+            "name":"worker",
+            "image": "alessandromacri/multi-worker",
+            "hostname": "worker",
+            "essential": false
+        },
+        {
+            "name":"nginx",
+            "image": "alessandromacri/multi-nginx",
+            "hostname": "nginx",
+            "essential": true
+        }
+    ]
+}
